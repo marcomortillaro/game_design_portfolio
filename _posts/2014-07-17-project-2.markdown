@@ -1,7 +1,7 @@
 ---
 layout: default
 modal-id: 2
-date: 2024-01-02
+date: 2024-01-03
 title: Theseus VR
 subtitle: Lead Game Designer | VR Combat & Camera
 img: theseus-thumbnail.jpg
