@@ -1,15 +1,33 @@
 ---
-title: Escape
-subtitle: Website Design
 layout: default
 modal-id: 2
-date: 2014-07-17
-img: escape.png
-thumbnail: escape-thumbnail.png
-alt: image-alt
-project-date: April 2014
-client: Start Bootstrap
-category: Web Development
-description: Lorem ipsum dolor sit amet, usu cu alterum nominavi lobortis. At duo novum diceret. Tantas apeirian vix et, usu sanctus postulant inciderint ut, populo diceret necessitatibus in vim. Cu eum dicam feugiat noluisse.
+date: 2024-01-02
+title: Theseus VR
+subtitle: Lead Game Designer | VR Combat & Camera
+img: theseus-thumbnail.jpg
+thumbnail: theseus-thumbnail.jpg
+alt: Theseus VR Gameplay
+project-date: 2017
+client: Reply Game Studios
+category: VR Action / Adventure
+description: A cinematic VR experience where I was promoted to Lead Game Designer to oversee the final balancing and 3Cs implementation.
+---
+
+### THE PROJECT
+Theseus is a dark, cinematic reimagining of the Minotaur myth, specifically designed for Virtual Reality. As a **Game Designer** (and later **Lead**), I focused on creating a third-person VR experience that felt visceral without compromising player comfort.
+
+### MY ROLE: LEAD GAME DESIGNER
+I stepped into the Lead role during production, ensuring the project met high-quality standards for VR gameplay and narrative flow.
+
+* [cite_start]**VR Camera & 3Cs**: Designed and tuned a proprietary third-person camera system specifically for VR to minimize motion sickness while maintaining a cinematic feel.
+* [cite_start]**Combat in VR**: Developed combat mechanics that translate well to the VR space, focusing on scale and spatial awareness during encounters with the Minotaur.
+* [cite_start]**Leadership Transition**: Successfully took over the design leadership mid-project, managing the final polishing phase and balancing the core gameplay loop.
+* [cite_start]**Immersive Systems**: Bridged the gap between traditional action mechanics and the unique constraints of VR hardware (PC/PS4)[cite: 45].
+
+> "Mastering the third-person perspective in VR required a deep dive into player comfort and spatial storytelling."
 
 ---
+#### Gameplay Showcase
+<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/0wqb0nfxvGo" frameborder="0" allowfullscreen></iframe>
+</div>
