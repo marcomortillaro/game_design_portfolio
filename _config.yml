@@ -7,40 +7,19 @@ email: marco.mortillaro.gd@gmail.com
 description: "Marco Mortillaro Game Design Portfolio"
 
 
-# Team names, titles and social links
+
+# Bio / About Section
 people:
-- name: Kay Garland
-  pic: 1
-  position: Lead Designer
-  social:
-    - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: stack-overflow
-      url: #
-
-- name: Larry Parker
-  pic: 2
-  position: Lead Marketer
-  social:
-    - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: linkedin
-      url: #
-
-- name: Diana Petersen
-  pic: 3
-  position: Lead Developer
-  social:
-    - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: google-plus
-      url: #
+  - name: Marco Mortillaro
+    pic: 1
+    position: Game Designer
+    social:
+      - title: linkedin
+        url: https://www.linkedin.com/in/tuo-profilo
+      - title: github
+        url: https://github.com/marcomortillaro
+      - title: gamepad  # Icona perfetta per Itch.io o gaming
+        url: https://marcomortillaro.itch.io/
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
