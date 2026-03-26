@@ -1,15 +1,33 @@
 ---
-title: Golden
-subtitle: Website Design
 layout: default
 modal-id: 3
-date: 2014-07-16
-img: golden.png
-thumbnail: golden-thumbnail.png
-alt: image-alt
-project-date: April 2014
-client: Start Bootstrap
-category: Web Development
-description: Lorem ipsum dolor sit amet, usu cu alterum nominavi lobortis. At duo novum diceret. Tantas apeirian vix et, usu sanctus postulant inciderint ut, populo diceret necessitatibus in vim. Cu eum dicam feugiat noluisse.
+date: 2024-01-01
+title: "Joe Dever's Lone Wolf"
+subtitle: Gamebook Designer | Systems & Narrative
+img: lonewolf-thumbnail.jpg
+thumbnail: lonewolf-thumbnail.jpg
+alt: Lone Wolf Gameplay
+project-date: 2013-2015
+client: Reply Game Studios
+category: Narrative RPG
+description: A unique blend of interactive fiction and 3D combat where I served as Gamebook Designer for a legendary fantasy IP.
+---
+
+### THE PROJECT
+Joe Dever's Lone Wolf is an innovative project that merges a traditional "Choose Your Own Adventure" gamebook with a full 3D turn-based combat system. Working on such a prestigious IP required a deep respect for the source material and a focus on narrative-driven mechanics.
+
+### MY ROLE: GAMEBOOK DESIGNER
+My work focused on the intersection of storytelling and gameplay, ensuring that the player's choices felt impactful and consistent with the Lone Wolf universe.
+
+* **Narrative Systems**: Designed the branching narrative paths and the integration of RPG stats into the text-based gameplay.
+* **Systems Design**: Developed the "Gamebook" logic, balancing the difficulty of non-combat encounters and character progression.
+* **Multi-platform Delivery**: Contributed to the design adjustments for Mobile, PC, and Console releases (PS4, Xbox One and Nintendo Switch), ensuring a seamless experience across all devices.
+* **IP Collaboration**: Worked within the constraints of Joe Dever's world-renowned fantasy setting, maintaining the tone and lore that fans expect.
+
+> "Merging old-school interactive storytelling with modern RPG combat was a masterclass in hybrid system design."
 
 ---
+#### Official Trailer
+<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/v1GFUuPJyJk" frameborder="0" allowfullscreen></iframe>
+</div>
