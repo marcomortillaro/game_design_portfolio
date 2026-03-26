@@ -3,7 +3,7 @@ layout: default
 modal-id: 4
 date: 2024-01-04
 title: "Unannounced Project"
-subtitle: Lead Game Designer | PC & Next-Gen | Roguelike Mechanics
+subtitle: Lead Game Designer | Combat & Roguelike Mechanics
 img: unannounced-thumbnail.jpg
 thumbnail: unannounced-thumbnail.jpg
 alt: Top Secret Project
