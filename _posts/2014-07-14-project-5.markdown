@@ -1,7 +1,7 @@
 ---
 layout: default
 modal-id: 5
-date: 2024-01-05
+date: 2024-01-01
 title: "Early Works & Edutainment"
 subtitle: Game Designer | Chicco, Ferrero, Mulino Bianco & Indie Dev
 img: early-works-thumb.jpg
