@@ -10,14 +10,14 @@ alt: Top Secret Project
 project-date: 2024 - 2026 (canceled)
 client: Reply Game Studios
 category: Action / Roguelike / AAA Production
-description: Currently leading a design team on a high-profile title featuring deep Roguelike systems and procedural gameplay loops.
+description: Lead a design team on a high-profile title featuring deep Roguelike systems and procedural gameplay loops.
 ---
 
 ### THE PROJECT
 Since 2022, I have been serving as the **Lead Game Designer** on a major unannounced production. While currently under NDA, the project represents a significant evolution in the studio's portfolio, blending high-end action with complex systemic design.
 
 ### MY ROLE: DESIGN LEADERSHIP & SYSTEMS
-In this role, I am responsible for overseeing the overall design vision, specifically focusing on the synergy between action combat and persistent progression systems.
+In this role, I was responsible for overseeing the overall design vision, specifically focusing on the synergy between action combat and persistent progression systems.
 
 * **Roguelike Systems Design**: Architecting procedural gameplay loops, meta-progression systems, and randomized encounter logic to ensure high replayability.
 * **Team Management**: Leading and mentoring a core design team of 6 people, ensuring consistency across all gameplay systems.
