@@ -5,7 +5,7 @@ subtitle: Lead Game Designer | Combat & 3Cs
 modal-id: 1
 date: 2024-01-01
 img: soulstice-thumbnail.jpg
-thumbnail: img/portfolio/soulstice-thumbnail.jpg
+thumbnail: soulstice-thumbnail.jpg
 alt: Soulstice Gameplay
 project-date: 2022
 client: Reply Game Studios
