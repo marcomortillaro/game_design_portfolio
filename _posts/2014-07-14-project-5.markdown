@@ -1,0 +1,33 @@
+---
+layout: default
+modal-id: 5
+date: 2024-01-05
+title: "Early Works & Edutainment"
+subtitle: Game Designer | Chicco, Ferrero, Mulino Bianco & Indie Dev
+img: early-works-thumb.jpg
+thumbnail: early-works-thumb.jpg
+alt: Edutainment and Mobile Projects
+project-date: 2010 - 2012
+client: Various (Chicco, Ferrero, Mulino Bianco, Indie)
+category: Edutainment / Mobile UX / Hardware UI
+description: Designing high-impact educational experiences for top-tier brands and independent mobile titles.
+---
+
+### THE OVERVIEW
+Before specializing in the Action AA space, I developed a strong foundation in **Edutainment and Mobile UX**. Between my experience at BeeCreative, Reply, and as an independent developer, I designed and delivered dozens of titles focused on intuitive gameplay and accessibility.
+
+### KEY HIGHLIGHTS
+
+* **Chicco Happy Tab**: Played a key role in the UX/UI design of the official Android tablet for kids. I designed the custom launcher and the core educational suite, ensuring a safe, "frictionless" interface for toddlers.
+* **Corporate Edutainment (Ferrero, Mulino Bianco)**: Designed interactive experiences and "advergaming" solutions for major Italian brands, balancing marketing goals with engaging gameplay loops.
+* **Indie Development (Animal's Boat for Toddlers)**: Developed and published independent titles, managing the full lifecycle from core design to store optimization. *Animal's Boat* became a benchmark for my "zero-text" design philosophy.
+* **UX for Non-Readers**: Mastered the art of designing for audiences that cannot read, using visual hierarchy, audio cues, and haptic feedback as the primary language.
+
+> "Working for brands like Chicco and Ferrero taught me the importance of brand consistency, while indie development gave me the technical grit to ship products independently."
+
+---
+#### Expertise Summary
+* **Hardware Integration:** Chicco Happy Tab (UX Lead and Game Design)
+* **Brand Experience:** Ferrero, Mulino Bianco, Chicco
+* **Indie Success:** Animal's Boat for Toddlers
+* **Design Pillars:** Accessibility, UX for Kids, Rapid Iteration
