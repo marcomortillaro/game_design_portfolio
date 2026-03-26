@@ -868,3 +868,21 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #{{ site.data.template.color.primary }};
 }
+/* Animazione per le icone delle Skills */
+.service-heading + .fa-stack:hover .fa-stack-1x, 
+.fa-stack:hover .fa-stack-2x {
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+/* Effetto pulsante leggero continuo (opzionale) */
+@keyframes pulse-icon {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.fa-stack:hover {
+    animation: pulse-icon 1s infinite;
+    cursor: pointer;
+}
