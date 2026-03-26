@@ -1,7 +1,7 @@
 ---
 layout: default
 modal-id: 4
-date: 2024-01-01
+date: 2024-01-05
 title: "Unannounced Project"
 subtitle: Lead Game Designer | Combat & Roguelike Mechanics
 img: unannounced-thumbnail.jpg
