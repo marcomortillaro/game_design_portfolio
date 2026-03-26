@@ -3,7 +3,7 @@ layout: default
 title: Soulstice
 subtitle: Lead Game Designer | Combat & 3Cs
 modal-id: 1
-date: 2024-01-03
+date: 2024-01-02
 img: soulstice-thumbnail.jpg
 thumbnail: soulstice-thumbnail.jpg
 alt: Soulstice Gameplay
