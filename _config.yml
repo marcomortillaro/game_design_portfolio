@@ -9,7 +9,7 @@ description: "Marco Mortillaro Game Design Portfolio"
 # Header settings
 header:
   title: "MARCO MORTILLARO"
-  phrase: "Lead Game Designer | Combat & 3Cs Specialist"
+  phrase: "Lead/Senior Game Designer | Combat & 3Cs Specialist"
   button_text: "Download CV (PDF)"
   button_link: "Marco_Mortillaro_CV.pdf" # Assicurati che il nome del file sia identico a quello che carichi su GitHub
 
@@ -17,7 +17,7 @@ header:
 people:
   - name: Marco Mortillaro
     pic: 1
-    position: Game Designer
+    position: Lead/Senior Game Designer
     social:
       - title: linkedin
         url: https://www.linkedin.com/in/marcomortillaro/
