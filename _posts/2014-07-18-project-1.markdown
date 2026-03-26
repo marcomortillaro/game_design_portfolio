@@ -1,15 +1,35 @@
 ---
-title: Dreams
-subtitle: Website Design
+---
 layout: default
+title: Soulstice
+subtitle: Lead Game Designer | Combat & 3Cs
 modal-id: 1
-date: 2014-07-18
-img: dreams.png
-thumbnail: dreams-thumbnail.png
-alt: image-alt
-project-date: April 2014
-client: Start Bootstrap
-category: Web Development
-description: Lorem ipsum dolor sit amet, usu cu alterum nominavi lobortis. At duo novum diceret. Tantas apeirian vix et, usu sanctus postulant inciderint ut, populo diceret necessitatibus in vim. Cu eum dicam feugiat noluisse.
+date: 2024-01-01
+img: soulstice-thumb.jpg
+thumbnail: img/portfolio/soulstice-thumb.jpg
+alt: Soulstice Gameplay
+project-date: 2022
+client: Reply Game Studios
+category: Action / Hack 'n' Slash
+---
+
+### The Project
+Soulstice is a fast-paced AA Action/Hack 'n' Slash title where players control two sisters simultaneously. As the **Lead Game Designer**, I was responsible for the core gameplay vision and managing a team of 6 designers throughout the full production cycle.
+
+### My Role: Combat & 3Cs Specialist
+My primary focus was defining the **Combat System** and the **3Cs** (Character, Controls, Camera) to ensure a high-degree of responsiveness and "game feel."
+
+* **Combat Design:** Oversaw the development of the dual-character combat mechanics, weapon balancing, and synergy between Briar and Lute.
+* **Encounter Design:** Designed and balanced high-stakes boss fights and enemy AI behaviors to maintain a challenging yet fair difficulty curve.
+* **Team Leadership:** Managed the design pipeline, ensuring feature consistency and cross-department communication between art, animation, and programming.
+* **Systems Balancing:** Fine-tuned the progression systems and combat economy to support a 20+ hour experience.
+
+> "Translating a complex dual-protagonist concept into a fluid, high-speed combat experience was the core challenge of this project."
+
+---
+#### Watch the Trailer
+<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/zuR-jxkV2dM" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ---
