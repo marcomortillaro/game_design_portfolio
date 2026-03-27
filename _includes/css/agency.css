@@ -950,3 +950,18 @@ header .container {
     position: relative;
     z-index: 3; /* Più alto di tutti */
 }
+/* Attiviamo la prospettiva sul contenitore */
+#portfolio .row {
+    perspective: 1000px;
+}
+
+.portfolio-item {
+    transform-style: preserve-3d; /* Fondamentale per il 3D interno */
+    transition: transform 0.1s ease; /* Fluidità nativa */
+}
+
+/* Facciamo "uscire" la caption quando la card si inclina */
+.portfolio-item:hover .portfolio-caption {
+    transform: translateZ(30px); /* Il testo si solleva di 30px */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5); /* Ombra dinamica */
+}
