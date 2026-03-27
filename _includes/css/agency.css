@@ -1321,21 +1321,6 @@ section#team,
     color: #e0e0e0 !important;
 }
 
-/* 3. BOX DELLE SKILLS: Rendiamoli ancora più scuri per farli "uscire" dallo sfondo grigio */
-#services .col-md-4 {
-    background: #0c0c0c !important; /* Nero come l'about, ma dentro il grigio */
-    border: 1px solid #333 !important;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
-    margin: 10px 0;
-    min-height: 380px;
-    padding: 40px 20px !important;
-    transition: all 0.3s ease;
-}
-
-#services .col-md-4:hover {
-    border-color: #6588A6 !important;
-    transform: translateY(-5px);
-}
 
 
 
@@ -1635,19 +1620,48 @@ section#contact .btn-xl:active {
 }
 
 /* TRASFORMA LE SKILLS IN TECH CHIPS */
+/* ==========================================================================
+   SKILLS BOXES: UNIFIED RESPONSIVE DESIGN
+   ========================================================================== */
+
+/* 1. REGOLE BASE (Valide per tutti i dispositivi) */
 #services .col-md-4 {
-    padding: 30px;
-    background: #161616; /* Grigio scurissimo */
-    border: 1px solid #222;
-    border-radius: 4px;
+    background: #0c0c0c !important; /* Nero profondo per staccare dal grigio */
+    border: 1px solid #333 !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
+    padding: 40px 20px !important;
     transition: all 0.3s ease;
-    margin-bottom: 20px;
-    width: 31%; /* Per mantenerli affiancati con il padding */
-    margin: 1%;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px; /* Spazio verticale fondamentale su mobile */
 }
 
+/* 2. LAYOUT DESKTOP (Schermi grandi) */
+@media(min-width: 992px) {
+    #services .col-md-4 {
+        width: 31% !important;
+        margin: 1% !important;
+        float: left; /* Mantiene l'allineamento orizzontale */
+        min-height: 380px; /* Più alto su desktop per equilibrio visivo */
+    }
+}
+
+/* 3. LAYOUT MOBILE (Schermi piccoli) */
+@media(max-width: 991px) {
+    #services .col-md-4 {
+        width: 100% !important; /* Occupa tutta la larghezza */
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        float: none;
+    }
+}
+
+/* 4. EFFETTO HOVER (Feedback visivo) */
 #services .col-md-4:hover {
-    border-color: #6588A6;
+    border-color: #6588A6 !important;
     transform: translateY(-5px);
 }
 
