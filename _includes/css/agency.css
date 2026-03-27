@@ -1044,3 +1044,90 @@ header .container {
 
 /* 6. CONTROLLO CONTAINER */
 #portfolio .container { position: relative; z-index: 20; }
+
+
+/* ==========================================================================
+   MODALI: DARK TECHNICAL LAYOUT
+   ========================================================================== */
+
+/* Sfondo della modale scuro e semi-trasparente */
+.portfolio-modal .modal-content {
+    background-color: rgba(12, 12, 12, 0.98) !important; /* Quasi nero, ma intravedi il movimento della griglia sotto */
+    color: #e0e0e0;
+    padding: 60px 0;
+}
+
+/* Titolo Progetto */
+.portfolio-modal .modal-content h2 {
+    color: #6588A6; /* Il tuo nuovo Blu */
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+/* Immagine dentro la modale */
+.portfolio-modal .modal-content img {
+    border: 1px solid #333;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border-radius: 4px;
+}
+
+/* Stile per i sottotitoli dei paragrafi */
+.portfolio-modal h3 {
+    color: #f1f1f1;
+    font-size: 1.5em;
+    border-left: 4px solid #6588A6;
+    padding-left: 15px;
+    margin-top: 40px;
+}
+
+/* Evidenziare Parole Chiave */
+.portfolio-modal b, .portfolio-modal strong {
+    color: #6588A6; /* Colore blu alle parole chiave */
+    font-weight: 700;
+}
+
+/* List Item (i tuoi punti elenco) */
+.portfolio-modal ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.portfolio-modal ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #222;
+    font-size: 1.1em;
+}
+
+/* Tasto Chiusura */
+.portfolio-modal .close-modal {
+    background-color: transparent !important;
+}
+.portfolio-modal .close-modal .lr, .portfolio-modal .close-modal .lr .rl {
+    background-color: #6588A6 !important; /* X Blu */
+}
+
+/* Stile per le PIATTAFORME e INFO RAPIDE */
+.project-details-bar {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.detail-item {
+    text-align: center;
+    padding: 10px;
+}
+
+.detail-item span {
+    display: block;
+    font-size: 0.8em;
+    color: #6588A6;
+    text-transform: uppercase;
+}
