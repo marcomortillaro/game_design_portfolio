@@ -969,52 +969,47 @@ header .container {
    PORTFOLIO BACKGROUND: BLUEPRINT GRID ANIMATION
    ========================================================================== */
 
+
 #portfolio {
-    background-color: #121212 !important; /* Fondo grigio scurissimo/nero */
+    background-color: #121212 !important; 
     position: relative;
     overflow: hidden;
     padding: 100px 0;
     
-    /* Griglia tecnica composta da 4 gradienti sovrapposti */
+    /* Griglia tecnica */
     background-image: 
         linear-gradient(rgba(90, 140, 122, 0.15) 1px, transparent 1px), 
         linear-gradient(90deg, rgba(90, 140, 122, 0.15) 1px, transparent 1px),
         linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px) !important;
     
-    /* Dimensioni della griglia: 100px per i quadrati grandi, 20px per i piccoli */
-    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
-    background-position: center center;
+    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px !important;
     
-    /* Animazione: si sposta di 100px in 60 secondi in loop infinito */
-    animation: blueprintBgMove 60s linear infinite;
+    /* Applichiamo l'animazione direttamente qui */
+    animation: blueprintBgMove 40s linear infinite !important;
 }
 
-/* Effetto vignetta radiale per dare profondità e non far sembrare la griglia piatta */
+/* Effetto vignetta radiale */
 #portfolio:after {
     content: "";
     position: absolute;
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%;
-    background: radial-gradient(circle at center, transparent 0%, #121212 80%);
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at center, transparent 0%, #121212 80%) !important;
     z-index: 1;
     pointer-events: none;
 }
 
-/* Assicura che i contenuti del portfolio stiano sopra lo sfondo */
 #portfolio .container {
     position: relative;
     z-index: 2;
 }
 
-/* Definizione del movimento della griglia */
+/* DEFINIZIONE DELL'ANIMAZIONE CON IL MOVIMENTO FORZATO */
 @keyframes blueprintBgMove {
-    0% { 
-        background-position: 0 0, 0 0, 0 0, 0 0; 
+    from { 
+        background-position: 0 0, 0 0, 0 0, 0 0 !important; 
     }
-    100% { 
-        background-position: 100px 100px, 100px 100px, 100px 100px, 100px 100px; 
+    to { 
+        background-position: 100px 100px, 100px 100px, 100px 100px, 100px 100px !important; 
     }
 }
