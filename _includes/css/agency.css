@@ -908,3 +908,52 @@ body {
     flex-direction: column;
     justify-content: center;
 }
+
+/* Gestione Video Hero */
+header {
+    position: relative;
+    overflow: hidden; /* Importante per contenere il video */
+}
+
+#hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0; /* Dietro il testo */
+    transform: translateX(-50%) translateY(-50%);
+    transition: opacity 2s ease-in-out; /* Dissolvenza dolce */
+}
+
+/* Immagine statica di overlay (quella che hai già) */
+.header-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/header-bg.jpg'); /* La tua immagine d'impatto */
+    background-size: cover;
+    background-position: center;
+    z-index: 1; /* Sopra il video all'inizio */
+    transition: opacity 2s ease-in-out;
+}
+
+/* Stato iniziale del video (nascosto) */
+.hidden-video {
+    opacity: 0;
+}
+
+/* Stato attivo del video (visibile) */
+.visible-video {
+    opacity: 1;
+}
+
+/* Assicurati che il testo sia sopra tutto */
+header .container {
+    position: relative;
+    z-index: 2;
+}
