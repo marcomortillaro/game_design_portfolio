@@ -1306,32 +1306,42 @@ header .container {
 
 /* Applichiamo lo stile a ID specifici per vincere la priorità */
 
-section#services, 
+/* ==========================================================================
+   DIFFERENZIAZIONE SEZIONI: SKILLS (GRIGIO) vs ABOUT (NERO)
+   ========================================================================== */
 
-section#team, 
-
-.about-section {
-
-    background-color: #0c0c0c !important;
-
-    /* Gradiente Radiale + Micro Griglia */
-
-    background-image: 
-
-        radial-gradient(circle at center, #1a1a1a 0%, #0c0c0c 85%),
-
-        linear-gradient(rgba(101, 136, 166, 0.05) 1px, transparent 1px), 
-
-        linear-gradient(90deg, rgba(101, 136, 166, 0.05) 1px, transparent 1px) !important;
-
-    background-size: auto, 40px 40px !important;
-
-    background-position: center center !important;
-
+/* 1. SEZIONE SKILLS (SERVICES): Grigio scuro per staccare */
+section#services {
+    background-color: #161616 !important; /* Grigio canna di fucile */
+    background-image: none !important;    /* Rimuoviamo definitivamente la griglia qui */
+    border-top: 1px solid #252525;
+    border-bottom: 1px solid #252525;
     padding: 120px 0 !important;
+}
 
+/* 2. SEZIONE ABOUT ME (TEAM): Nero profondo per far risaltare la foto */
+section#team, 
+.about-section {
+    background-color: #0c0c0c !important;
+    background-image: radial-gradient(circle at center, #1a1a1a 0%, #0c0c0c 85%) !important;
+    padding: 120px 0 !important;
     color: #e0e0e0 !important;
+}
 
+/* 3. BOX DELLE SKILLS: Rendiamoli ancora più scuri per farli "uscire" dallo sfondo grigio */
+#services .col-md-4 {
+    background: #0c0c0c !important; /* Nero come l'about, ma dentro il grigio */
+    border: 1px solid #333 !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
+    margin: 10px 0;
+    min-height: 380px;
+    padding: 40px 20px !important;
+    transition: all 0.3s ease;
+}
+
+#services .col-md-4:hover {
+    border-color: #6588A6 !important;
+    transform: translateY(-5px);
 }
 
 
