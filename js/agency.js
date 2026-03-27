@@ -36,18 +36,16 @@ $('div.modal').on('show.bs.modal', function() {
 	}
 });
 // Dissolvenza Immagine -> Video nell'Hero
+
 document.addEventListener("DOMContentLoaded", function() {
     var video = document.getElementById('hero-video');
-    var overlay = document.querySelector('.header-image-overlay');
-
-    if (video && overlay) {
+    
+    if (video) {
+        // Quando il video è pronto per essere riprodotto senza interruzioni
         video.oncanplaythrough = function() {
-            // Il video è pronto, aspettiamo un secondo per l'impatto dell'immagine
             setTimeout(function() {
-                video.classList.remove('hidden-video');
-                video.classList.add('visible-video');
-                overlay.style.opacity = '0'; // Nascondi l'immagine
-            }, 1000); // 1 secondo di ritardo
+                video.style.opacity = '1';
+            }, 500); // Mezzo secondo di pausa per far godere l'immagine statica
         };
     }
 });
