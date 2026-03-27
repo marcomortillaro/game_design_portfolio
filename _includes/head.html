@@ -24,5 +24,48 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+  section#services, 
+  section#team, 
+  section#portfolio, 
+  section#about,
+  .about-section {
+    background-color: #0c0c0c !important;
+    background-image: 
+        radial-gradient(circle at center, #1a1a1a 0%, #0c0c0c 85%),
+        linear-gradient(rgba(101, 136, 166, 0.08) 1px, transparent 1px), 
+        linear-gradient(90deg, rgba(101, 136, 166, 0.08) 1px, transparent 1px) !important;
+    background-size: auto, 45px 45px !important;
+    background-position: center center !important;
+    padding: 120px 0 !important;
+    color: #e0e0e0 !important;
+  }
+
+  /* Fix per i mirini HUD sulla foto profilo */
+  .profile-img-container::before, 
+  .profile-img-container::after {
+    content: "" !important;
+    position: absolute !important;
+    width: 45px !important;
+    height: 45px !important;
+    border: 2px solid #6588A6 !important;
+    display: block !important;
+    z-index: 10 !important;
+  }
+  .profile-img-container::before { top: 0; left: 0; border-right: none !important; border-bottom: none !important; }
+  .profile-img-container::after { bottom: 0; right: 0; border-left: none !important; border-top: none !important; }
+
+  /* Forza l'allineamento del testo bio */
+  .about-bio-text {
+    text-align: left !important;
+    color: #c0c0c0 !important;
+  }
+  .about-text-highlight {
+    color: #6588A6 !important;
+    text-align: left !important;
+    border-left: 4px solid #6588A6 !important;
+    padding-left: 20px !important;
+  }
+</style>
     {% include google_analytics.html %}
 </head>
