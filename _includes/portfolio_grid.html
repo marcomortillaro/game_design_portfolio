@@ -9,7 +9,12 @@
             </div>
             <div class="row">
             {% for post in site.posts %}
-                <div class="col-md-4 col-sm-6 portfolio-item">
+                <div class="col-md-4 col-sm-6 portfolio-item" 
+                    data-tilt 
+                     data-tilt-max="10" 
+                     data-tilt-speed="400" 
+                     data-tilt-glare="true" 
+                     data-tilt-max-glare="0.3">
                     <a href="#portfolioModal{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
