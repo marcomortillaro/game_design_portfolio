@@ -1712,3 +1712,35 @@ section#contact .btn-xl:active {
     bottom: 60px; right: -5px; /* Aggiustato per i social sotto */
     border-left: none; border-top: none;
 }
+
+/* ==========================================================================
+   MODAL TITLES: MOBILE CENTERING & RESPONSIVE TYPE
+   ========================================================================== */
+
+@media(max-width: 767px) {
+    /* Forza la centratura e riduce il font per titoli lunghi */
+    .portfolio-modal .modal-content h2 {
+        font-size: 2em !important; /* Ridotto da 3em per evitare overflow */
+        text-align: center !important;
+        line-height: 1.2 !important;
+        margin-bottom: 20px !important;
+        padding: 0 10px !important; /* Evita che le lettere tocchino i bordi */
+    }
+
+    /* Assicura che anche i sottotitoli siano centrati */
+    .portfolio-modal .modal-content p.item-intro {
+        text-align: center !important;
+        font-size: 14px !important;
+    }
+    
+    /* Centratura per la barra dei dettagli del progetto su mobile */
+    .project-details-bar {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+    
+    .detail-item {
+        margin-bottom: 15px !important;
+    }
+}
