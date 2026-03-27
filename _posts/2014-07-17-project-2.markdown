@@ -11,6 +11,10 @@ project-date: 2017
 client: Reply Game Studios
 category: VR Action / Adventure
 description: A cinematic VR experience where I was promoted to Lead Game Designer to oversee the final balancing and 3Cs implementation.
+platforms: VR (PC, PS4)
+role: Lead Game Designer
+engine: Unreal Engine 4
+team-size: 2 Designers (Managed)
 ---
 
 ### THE PROJECT
