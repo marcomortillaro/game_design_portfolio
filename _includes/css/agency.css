@@ -1383,3 +1383,91 @@ section#services .service-item:hover {
     text-align: left;
     line-height: 1.8;
 }
+
+/* ==========================================================================
+   LEAD DESIGNER CUSTOM OVERRIDE (Aggiunte finali)
+   ========================================================================== */
+
+/* 1. UNIFICAZIONE BACKGROUND SCURO (Skills, About, Portfolio, Timeline, Contatti) */
+section#services, 
+section#team, 
+section#portfolio, 
+section#about,
+.about-section {
+    background-color: #0c0c0c !important;
+    background-image: 
+        radial-gradient(circle at center, #1a1a1a 0%, #0c0c0c 85%),
+        linear-gradient(rgba(101, 136, 166, 0.05) 1px, transparent 1px), 
+        linear-gradient(90deg, rgba(101, 136, 166, 0.05) 1px, transparent 1px) !important;
+    background-size: auto, 40px 40px !important;
+    background-position: center center !important;
+    color: #e0e0e0 !important;
+}
+
+/* 2. SKILLS (Tech Chips) */
+#services .service-item {
+    background: rgba(26, 26, 26, 0.9) !important;
+    border: 1px solid #333 !important;
+    padding: 40px 20px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+#services .service-item:hover { border-color: #6588A6 !important; transform: translateY(-5px); }
+#services .fa-stack { color: #6588A6 !important; }
+
+/* 3. ABOUT ME (HUD Profile) */
+.profile-img-container {
+    position: relative;
+    display: inline-block;
+    padding: 15px;
+}
+.profile-img-container img {
+    border: 1px solid #444 !important;
+    border-radius: 0 !important;
+    max-width: 250px;
+}
+.profile-img-container::before, .profile-img-container::after {
+    content: "" !important;
+    position: absolute !important;
+    width: 40px !important;
+    height: 40px !important;
+    border: 2px solid #6588A6 !important;
+}
+.profile-img-container::before { top: 0; left: 0; border-right: none !important; border-bottom: none !important; }
+.profile-img-container::after { bottom: 0; right: 0; border-left: none !important; border-top: none !important; }
+
+.about-text-highlight {
+    color: #6588A6 !important;
+    font-size: 1.5em;
+    border-left: 4px solid #6588A6 !important;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    display: block;
+    text-align: left;
+}
+.about-bio-text { color: #c0c0c0 !important; text-align: left !important; line-height: 1.9 !important; padding-left: 20px; }
+
+/* 4. MODALI (Dark Upgrade) */
+.portfolio-modal .modal-content {
+    background-color: rgba(12, 12, 12, 0.98) !important;
+    color: #fff !important;
+}
+.portfolio-modal h2 { color: #6588A6 !important; }
+.project-details-bar { 
+    background: #1a1a1a !important; 
+    border: 1px solid #333 !important; 
+    display: flex; 
+    justify-content: space-around; 
+    margin: 30px 0;
+    padding: 20px;
+}
+
+/* 5. FIX NAVBAR & FOOTER */
+.navbar-default.navbar-shrink { background-color: #0c0c0c !important; }
+footer { background-color: #0c0c0c !important; color: #777 !important; }
+
+/* Responsive Fix */
+@media(max-width:991px) {
+    .about-text-highlight, .about-bio-text { padding-left: 0; text-align: center !important; border-left: none !important; }
+}
