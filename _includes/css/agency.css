@@ -1296,81 +1296,274 @@ header .container {
     cursor: pointer;
 }
 
+/* ==========================================================================
+
+   BLOCKING FIX: SKILLS & ABOUT (FORCE DEPTH)
+
+   ========================================================================== */
+
+
+
+/* Applichiamo lo stile a ID specifici per vincere la priorità */
+
+section#services, 
+
+section#team, 
+
+.about-section {
+
+    background-color: #0c0c0c !important;
+
+    /* Gradiente Radiale + Micro Griglia */
+
+    background-image: 
+
+        radial-gradient(circle at center, #1a1a1a 0%, #0c0c0c 85%),
+
+        linear-gradient(rgba(101, 136, 166, 0.05) 1px, transparent 1px), 
+
+        linear-gradient(90deg, rgba(101, 136, 166, 0.05) 1px, transparent 1px) !important;
+
+    background-size: auto, 40px 40px !important;
+
+    background-position: center center !important;
+
+    padding: 120px 0 !important;
+
+    color: #e0e0e0 !important;
+
+}
+
+
+
+/* --- SKILLS CHIPS --- */
+
+section#services .service-item {
+
+    background: rgba(26, 26, 26, 0.9) !important;
+
+    border: 1px solid #333 !important;
+
+    padding: 40px 20px;
+
+    border-radius: 4px;
+
+    transition: all 0.3s ease;
+
+}
+
+
+
+section#services .service-item:hover {
+
+    border-color: #6588A6 !important;
+
+    box-shadow: 0 0 20px rgba(101, 136, 166, 0.2);
+
+}
+
+
+
+/* --- ABOUT ME HUD --- */
+
+.profile-img-container {
+
+    position: relative;
+
+    display: inline-block;
+
+    padding: 15px;
+
+    z-index: 5;
+
+}
+
+
+
+.profile-img-container img {
+
+    border: 1px solid #444 !important;
+
+    border-radius: 0 !important; 
+
+    max-width: 250px;
+
+}
+
+
+
+/* Forziamo gli angoli HUD */
+
+.profile-img-container::before, 
+
+.profile-img-container::after {
+
+    content: "" !important;
+
+    position: absolute !important;
+
+    width: 40px !important;
+
+    height: 40px !important;
+
+    border: 2px solid #6588A6 !important;
+
+    z-index: 10 !important;
+
+    display: block !important;
+
+}
+
+
+
+.profile-img-container::before {
+
+    top: 0; left: 0;
+
+    border-right: none !important; border-bottom: none !important;
+
+}
+
+
+
+.profile-img-container::after {
+
+    bottom: 0; right: 0;
+
+    border-left: none !important; border-top: none !important;
+
+}
+
+
+
+/* Tipografia */
+
+.about-text-highlight {
+
+    color: #6588A6 !important;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    border-left: 4px solid #6588A6 !important;
+
+    padding-left: 20px;
+
+    margin-bottom: 20px;
+
+    display: block;
+
+    text-align: left;
+
+}
+
+
+
+.about-bio-text {
+
+    color: #c0c0c0 !important;
+
+    text-align: left;
+
+    line-height: 1.8;
+
+}
+
+
+
 /* ==========================================================
-   SOLID DARK UPGRADE - UNIFIED & CLEANED
+
+   FORCE DARK MODE & HUD STYLE - TEST DEFINITIVO
+
    ========================================================== */
 
-/* 1. SFONDO UNIFICATO (Per tutte le sezioni che devono essere scure) */
-section#services, 
-section#team, 
-section#about, 
-section#contact,
-.about-section {
+
+
+/* Applichiamo il background scuro e la griglia a TUTTE le sezioni principali */
+
+#services, #portfolio, #about, #team, #contact {
+
     background-color: #0c0c0c !important;
+
     background-image: 
+
         radial-gradient(circle at center, #1a1a1a 0%, #0c0c0c 85%),
-        linear-gradient(rgba(101, 136, 166, 0.08) 1px, transparent 1px), 
-        linear-gradient(90deg, rgba(101, 136, 166, 0.08) 1px, transparent 1px) !important;
-    background-size: auto, 45px 45px !important;
-    background-position: center center !important;
+
+        linear-gradient(rgba(101, 136, 166, 0.05) 1px, transparent 1px), 
+
+        linear-gradient(90deg, rgba(101, 136, 166, 0.05) 1px, transparent 1px) !important;
+
+    background-size: auto, 40px 40px !important;
+
     background-attachment: scroll !important;
+
     color: #e0e0e0 !important;
-    padding: 120px 0 !important;
+
 }
 
-/* 2. SKILLS (Solo dettagli specifici) */
-section#services .service-item {
-    background: rgba(26, 26, 26, 0.9) !important;
-    border: 1px solid #333 !important;
-    padding: 40px 20px;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-}
-section#services .service-item:hover {
-    border-color: #6588A6 !important;
-}
 
-/* 3. ABOUT ME / TEAM HUD (Dettagli grafici) */
+
+/* Fix per le immagini profilo HUD */
+
 .profile-img-container {
+
     position: relative;
+
     display: inline-block;
+
     padding: 15px;
+
     z-index: 5;
-}
-.profile-img-container img {
-    border: 1px solid #444 !important;
-    border-radius: 0 !important;
-    max-width: 250px;
+
 }
 
-/* Angoli HUD (Definiti una volta sola) */
-.profile-img-container::before, 
-.profile-img-container::after {
-    content: "" !important;
-    position: absolute !important;
-    width: 40px !important;
-    height: 40px !important;
-    border: 2px solid #6588A6 !important;
-    z-index: 10 !important;
-    display: block !important;
+.profile-img-container img {
+
+    border: 1px solid #444 !important;
+
+    border-radius: 0 !important;
+
+    max-width: 250px;
+
 }
+
+.profile-img-container::before, .profile-img-container::after {
+
+    content: "" !important;
+
+    position: absolute !important;
+
+    width: 40px !important;
+
+    height: 40px !important;
+
+    border: 2px solid #6588A6 !important;
+
+    display: block !important;
+
+}
+
 .profile-img-container::before { top: 0; left: 0; border-right: none !important; border-bottom: none !important; }
+
 .profile-img-container::after { bottom: 0; right: 0; border-left: none !important; border-top: none !important; }
 
-/* Tipografia Bio */
+
+
+/* Testo biografia */
+
 .about-text-highlight {
+
     color: #6588A6 !important;
-    font-size: 1.5em !important;
-    font-weight: 700 !important;
-    text-transform: uppercase !important;
+
+    font-size: 1.5em;
+
     border-left: 4px solid #6588A6 !important;
-    padding-left: 20px !important;
-    margin-bottom: 20px !important;
-    display: block !important;
-    text-align: left !important;
-}
-.about-bio-text {
-    color: #c0c0c0 !important;
-    text-align: left !important;
-    line-height: 1.8 !important;
+
+    padding-left: 20px;
+
+    display: block;
+
+    text-align: left;
+
 }
