@@ -965,3 +965,56 @@ header .container {
     transform: translateZ(30px); /* Il testo si solleva di 30px */
     box-shadow: 0 10px 20px rgba(0,0,0,0.5); /* Ombra dinamica */
 }
+/* ==========================================================================
+   PORTFOLIO BACKGROUND: BLUEPRINT GRID ANIMATION
+   ========================================================================== */
+
+#portfolio {
+    background-color: #121212 !important; /* Fondo grigio scurissimo/nero */
+    position: relative;
+    overflow: hidden;
+    padding: 100px 0;
+    
+    /* Griglia tecnica composta da 4 gradienti sovrapposti */
+    background-image: 
+        linear-gradient(rgba(90, 140, 122, 0.15) 1px, transparent 1px), 
+        linear-gradient(90deg, rgba(90, 140, 122, 0.15) 1px, transparent 1px),
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    
+    /* Dimensioni della griglia: 100px per i quadrati grandi, 20px per i piccoli */
+    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    background-position: center center;
+    
+    /* Animazione: si sposta di 100px in 60 secondi in loop infinito */
+    animation: blueprintBgMove 60s linear infinite;
+}
+
+/* Effetto vignetta radiale per dare profondità e non far sembrare la griglia piatta */
+#portfolio:after {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background: radial-gradient(circle at center, transparent 0%, #121212 80%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Assicura che i contenuti del portfolio stiano sopra lo sfondo */
+#portfolio .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Definizione del movimento della griglia */
+@keyframes blueprintBgMove {
+    0% { 
+        background-position: 0 0, 0 0, 0 0, 0 0; 
+    }
+    100% { 
+        background-position: 100px 100px, 100px 100px, 100px 100px, 100px 100px; 
+    }
+}
