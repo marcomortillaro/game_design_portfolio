@@ -1167,3 +1167,109 @@ header .container {
     text-transform: uppercase;
     font-weight: 700;
 }
+
+/* ==========================================================================
+   CAREER SECTION: TECH TIMELINE & SCROLL REVEAL
+   ========================================================================== */
+
+/* 1. Sfondo e Testi Generali */
+#about {
+    background-color: #0c0c0c !important; /* Nero profondo coerente col Portfolio */
+    color: #e0e0e0;
+    padding: 100px 0;
+}
+
+#about .section-heading {
+    color: #f1f1f1 !important;
+}
+
+#about .section-subheading {
+    color: #a0a0a0 !important;
+}
+
+/* 2. Struttura della Timeline (La linea centrale) */
+.timeline:before {
+    background-color: #333 !important; /* Grigio scuro per la linea "spenta" */
+    width: 2px;
+}
+
+/* 3. Animazione di Entrata (Stato Iniziale: Nascosto) */
+.timeline > li {
+    opacity: 0;
+    transform: translateX(-40px); /* Parte da sinistra */
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    margin-bottom: 80px;
+}
+
+/* I blocchi "invertiti" partono da destra */
+.timeline > li.timeline-inverted {
+    transform: translateX(40px);
+}
+
+/* Stato Finale: Visibile (attivato dal JS che aggiunge la classe .is-visible) */
+.timeline > li.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* 4. I Cerchi (Timeline Images) */
+.timeline > li .timeline-image {
+    background-color: #1a1a1a !important;
+    border: 7px solid #2a2a2a !important;
+    transition: all 0.4s ease;
+    z-index: 10;
+}
+
+/* Hover sui cerchi: Illuminazione Blu #6588A6 */
+.timeline > li:hover .timeline-image {
+    border-color: #6588A6 !important;
+    transform: scale(1.15);
+    box-shadow: 0 0 25px rgba(101, 136, 166, 0.4);
+}
+
+/* 5. Tipografia dei Milestone */
+.timeline .timeline-heading h4 {
+    color: #6588A6 !important; /* Il tuo Blu per l'azienda/data */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 14px;
+}
+
+.timeline .timeline-heading h4.subheading {
+    color: #ffffff !important; /* Bianco per il Ruolo (Lead Designer, etc.) */
+    font-size: 1.3em;
+    font-style: normal;
+    margin: 10px 0;
+}
+
+.timeline .timeline-body p {
+    color: #b0b0b0 !important;
+    line-height: 1.6;
+}
+
+/* 6. L'ultimo cerchio (Call to Action) */
+.timeline > li:last-child .timeline-image {
+    background-color: #6588A6 !important;
+    border-color: #6588A6 !important;
+    color: #fff !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline > li:last-child .timeline-image h4 {
+    color: #fff !important;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+/* Fix per Mobile: la linea deve rimanere centrata o coerente */
+@media(max-width:767px) {
+    .timeline > li {
+        transform: translateY(30px); /* Su mobile preferiamo l'entrata dal basso */
+    }
+    .timeline > li.timeline-inverted {
+        transform: translateY(30px);
+    }
+}
