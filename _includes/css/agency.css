@@ -1297,139 +1297,89 @@ header .container {
 }
 
 /* ==========================================================================
-   FINAL CONSOLIDATED UPGRADE: SKILLS (CHIPS) & ABOUT (HUD + DEPTH)
+   BLOCKING FIX: SKILLS & ABOUT (FORCE DEPTH)
    ========================================================================== */
 
-/* Forza lo sfondo scuro con profondità su entrambe le sezioni */
-#services, #team, .about-section {
-    background: 
+/* Applichiamo lo stile a ID specifici per vincere la priorità */
+section#services, 
+section#team, 
+.about-section {
+    background-color: #0c0c0c !important;
+    /* Gradiente Radiale + Micro Griglia */
+    background-image: 
         radial-gradient(circle at center, #1a1a1a 0%, #0c0c0c 85%),
-        linear-gradient(rgba(101, 136, 166, 0.03) 1px, transparent 1px), 
-        linear-gradient(90deg, rgba(101, 136, 166, 0.03) 1px, transparent 1px) !important;
-    background-size: auto, 50px 50px !important;
-    padding: 110px 0;
-    color: #e0e0e0;
-    position: relative;
-    overflow: hidden;
+        linear-gradient(rgba(101, 136, 166, 0.05) 1px, transparent 1px), 
+        linear-gradient(90deg, rgba(101, 136, 166, 0.05) 1px, transparent 1px) !important;
+    background-size: auto, 40px 40px !important;
+    background-position: center center !important;
+    padding: 120px 0 !important;
+    color: #e0e0e0 !important;
 }
 
-/* --- 1. SKILLS: TECH CHIPS STYLE --- */
-.service-item {
-    background: rgba(22, 22, 22, 0.8); /* Leggera trasparenza per far vedere la griglia sotto */
-    padding: 45px 25px;
-    border: 1px solid #222;
+/* --- SKILLS CHIPS --- */
+section#services .service-item {
+    background: rgba(26, 26, 26, 0.9) !important;
+    border: 1px solid #333 !important;
+    padding: 40px 20px;
     border-radius: 4px;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    height: 100%;
+    transition: all 0.3s ease;
 }
 
-.service-item:hover {
-    border-color: #6588A6;
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(101, 136, 166, 0.15);
-    background: #1a1a1a;
+section#services .service-item:hover {
+    border-color: #6588A6 !important;
+    box-shadow: 0 0 20px rgba(101, 136, 166, 0.2);
 }
 
-#services .fa-stack {
-    color: #6588A6;
-    margin-bottom: 10px;
-}
-
-#services h4.service-heading {
-    color: #f1f1f1 !important;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 1.2em;
-    margin-top: 20px;
-}
-
-/* --- 2. ABOUT/TEAM: HUD PROFILE STYLE --- */
+/* --- ABOUT ME HUD --- */
 .profile-img-container {
     position: relative;
     display: inline-block;
     padding: 15px;
-    margin-bottom: 25px;
     z-index: 5;
 }
 
 .profile-img-container img {
-    border: 1px solid #333;
-    border-radius: 0 !important; /* Rimuove il cerchio del template */
-    max-width: 260px;
-    filter: grayscale(10%) contrast(1.1);
-    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    border: 1px solid #444 !important;
+    border-radius: 0 !important; 
+    max-width: 250px;
 }
 
-/* Angoli HUD Blu */
+/* Forziamo gli angoli HUD */
 .profile-img-container::before, 
 .profile-img-container::after {
-    content: "";
-    position: absolute;
-    width: 45px;
-    height: 45px;
-    border: 2px solid #6588A6;
-    z-index: 10;
+    content: "" !important;
+    position: absolute !important;
+    width: 40px !important;
+    height: 40px !important;
+    border: 2px solid #6588A6 !important;
+    z-index: 10 !important;
+    display: block !important;
 }
 
 .profile-img-container::before {
     top: 0; left: 0;
-    border-right: none; border-bottom: none;
+    border-right: none !important; border-bottom: none !important;
 }
 
 .profile-img-container::after {
     bottom: 0; right: 0;
-    border-left: none; border-top: none;
+    border-left: none !important; border-top: none !important;
 }
 
-/* Tipografia e Layout Biografia */
+/* Tipografia */
 .about-text-highlight {
-    font-size: 1.5em;
-    color: #6588A6;
+    color: #6588A6 !important;
     font-weight: 700;
     text-transform: uppercase;
-    display: block;
+    border-left: 4px solid #6588A6 !important;
+    padding-left: 20px;
     margin-bottom: 20px;
-    border-left: 4px solid #6588A6;
-    padding-left: 25px;
+    display: block;
     text-align: left;
-    letter-spacing: 1px;
 }
 
 .about-bio-text {
-    font-size: 1.15em;
-    line-height: 1.9;
-    color: #c0c0c0 !important; /* Leggibilità migliorata */
+    color: #c0c0c0 !important;
     text-align: left;
-    padding-left: 25px;
-}
-
-.about-bio-text strong {
-    color: #6588A6; /* Keyword evidenziate in blu */
-}
-
-/* Social buttons coerenza */
-#team .social-buttons {
-    margin-top: 15px;
-}
-
-#team .social-buttons li a {
-    background-color: #1a1a1a;
-    color: #6588A6;
-    border: 1px solid #333;
-    transition: all 0.3s ease;
-}
-
-#team .social-buttons li a:hover {
-    background-color: #6588A6;
-    color: #fff;
-    transform: translateY(-3px);
-}
-
-/* Mobile Fix */
-@media(max-width:991px) {
-    .about-text-highlight, .about-bio-text {
-        padding-left: 0;
-        text-align: center;
-        border-left: none;
-    }
+    line-height: 1.8;
 }
