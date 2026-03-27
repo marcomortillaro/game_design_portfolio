@@ -1419,3 +1419,15 @@ header .container {
     color: #b0b0b0;
     text-align: justify;
 }
+/* Unifica lo stile About e Team */
+#team, .about-section {
+    background-color: #0c0c0c !important;
+    padding: 100px 0;
+}
+
+/* Rendi la foto quadrata invece che tonda per i mirini HUD */
+.profile-img-container img {
+    border-radius: 0; /* Rimuove il cerchio per l'effetto HUD */
+    max-width: 280px;
+    margin: 0 auto;
+}
