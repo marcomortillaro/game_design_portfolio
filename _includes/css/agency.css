@@ -1567,3 +1567,38 @@ section#services .service-item:hover {
     text-align: left;
 
 }
+/* ==========================================================================
+   CONTACT SECTION: RESTORE IMAGE & VIGNETTE
+   ========================================================================== */
+
+section#contact {
+    /* 1. Forza il colore di base nero */
+    background-color: #0c0c0c !important; 
+    
+    /* 2. Ripristina l'immagine specifica (il castello) */
+    background-image: url('{{ site.baseurl }}/img/map-image.png') !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    
+    position: relative;
+    padding: 100px 0 !important;
+    z-index: 1;
+}
+
+/* 3. L'overlay radiale per sfumare i bordi ed evitare il "taglio" netto */
+section#contact::before {
+    content: "" !important;
+    position: absolute !important;
+    top: 0; left: 0; width: 100%; height: 100%;
+    /* Sfumatura: trasparente al centro, nero ai bordi */
+    background: radial-gradient(circle at center, rgba(12, 12, 12, 0.2) 0%, #0c0c0c 90%) !important;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* 4. Contenuto sopra l'overlay */
+section#contact .container {
+    position: relative;
+    z-index: 10;
+}
