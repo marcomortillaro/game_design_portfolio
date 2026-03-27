@@ -1273,3 +1273,7 @@ header .container {
         transform: translateY(30px);
     }
 }
+.timeline > li:last-child a:hover .timeline-image {
+    background-color: #516d85 !important; /* Un blu un po' più scuro all'hover */
+    cursor: pointer;
+}
