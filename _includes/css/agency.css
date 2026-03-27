@@ -969,14 +969,23 @@ header .container {
    PORTFOLIO BACKGROUND: BLUEPRINT GRID ANIMATION
    ========================================================================== */
 
-
 #portfolio {
-    background-color: #121212 !important; 
+    background-color: #0e0e0e !important; /* Ancora un pelo più scuro */
     position: relative;
     overflow: hidden;
     padding: 100px 0;
+    z-index: 1;
+}
+
+/* Creiamo un "velo" separato per la griglia per non interferire con il contenitore */
+#portfolio::before {
+    content: "";
+    position: absolute;
+    top: -100px; /* Più grande del contenitore per non vedere i bordi mentre si muove */
+    left: -100px;
+    right: -100px;
+    bottom: -100px;
     
-    /* Griglia tecnica */
     background-image: 
         linear-gradient(rgba(90, 140, 122, 0.15) 1px, transparent 1px), 
         linear-gradient(90deg, rgba(90, 140, 122, 0.15) 1px, transparent 1px),
@@ -985,31 +994,33 @@ header .container {
     
     background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px !important;
     
-    /* Applichiamo l'animazione direttamente qui */
-    animation: blueprintBgMove 40s linear infinite !important;
+    /* USIAMO TRANSFORM INVECE DI BACKGROUND-POSITION (Molto più fluido e performante) */
+    animation: gridMove 20s linear infinite !important;
+    z-index: -1;
+    pointer-events: none;
 }
 
-/* Effetto vignetta radiale */
-#portfolio:after {
+/* L'effetto vignetta sopra la griglia */
+#portfolio::after {
     content: "";
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: radial-gradient(circle at center, transparent 0%, #121212 80%) !important;
-    z-index: 1;
+    background: radial-gradient(circle at center, transparent 0%, #0e0e0e 85%) !important;
+    z-index: 0;
     pointer-events: none;
 }
 
 #portfolio .container {
     position: relative;
-    z-index: 2;
+    z-index: 10;
 }
 
-/* DEFINIZIONE DELL'ANIMAZIONE CON IL MOVIMENTO FORZATO */
-@keyframes blueprintBgMove {
+/* Animazione tramite Transform: sposta fisicamente il "velo" della griglia */
+@keyframes gridMove {
     from { 
-        background-position: 0 0, 0 0, 0 0, 0 0 !important; 
+        transform: translate(0, 0); 
     }
     to { 
-        background-position: 100px 100px, 100px 100px, 100px 100px, 100px 100px !important; 
+        transform: translate(100px, 100px); 
     }
 }
