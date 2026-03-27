@@ -911,7 +911,7 @@ body {
 
 /* Gestione Video Hero */
 header {
-    background-image: url('../img/TUO-SCREENSHOT-IMPATTO.jpg'); 
+    background-image: url('../img/header.png'); 
     background-position: center center;
     background-size: cover;
     position: relative;
