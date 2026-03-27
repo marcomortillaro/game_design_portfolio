@@ -1635,30 +1635,20 @@ section#contact .btn-xl:active {
     flex-wrap: wrap !important;
 }
 
+/* 1. REGOLE BASE (Valide per tutti i dispositivi) */
 #services .col-md-4 {
-    display: flex !important;
-    flex-direction: column !important;
-    margin-bottom: 30px;
-    background: transparent !important; /* Puliamo lo sfondo della colonna */
-    border: none !important;
-}
-
-/* Questo è il box interno visibile nello screenshot */
-#services .col-md-4 .service-item, 
-#services .service-item { /* Uso entrambi i selettori per sicurezza */
-    background: #0c0c0c !important; 
+    background: #0c0c0c !important; /* Nero profondo per staccare dal grigio */
     border: 1px solid #333 !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
     padding: 40px 20px !important;
     transition: all 0.3s ease;
-    
-    /* IL TRUCCO MAGICO */
-    display: flex !important;
-    flex-direction: column !important;
-    flex: 1 1 auto !important; /* Forza il box a espandersi verticalmente */
-    width: 100% !important;
-    
+    min-height: 320px;
+    flex: 1 0 auto !important;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-bottom: 30px; /* Spazio verticale fondamentale su mobile */
 }
 
 /* Feedback Hover sul box interno */
