@@ -1131,3 +1131,39 @@ header .container {
     color: #6588A6;
     text-transform: uppercase;
 }
+/* Miglioriamo la leggibilità del testo nelle modali scure */
+.project-content-text {
+    text-align: left; /* Il testo lungo è più leggibile a sinistra */
+    max-width: 800px;
+    margin: 40px auto;
+    line-height: 1.8;
+}
+
+.project-content-text h3 {
+    margin-top: 50px;
+    color: #6588A6; /* Titoli interni in blu */
+}
+
+.project-content-text strong {
+    color: #6588A6; /* Parole chiave evidenziate in blu */
+}
+
+/* La barra dei dettagli */
+.project-details-bar {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    margin: 30px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.detail-item span {
+    display: block;
+    font-size: 10px;
+    color: #6588A6;
+    text-transform: uppercase;
+    font-weight: 700;
+}
