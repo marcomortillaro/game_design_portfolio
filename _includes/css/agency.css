@@ -1613,3 +1613,73 @@ section#contact .btn-xl:active {
 section#contact .btn-xl:active {
     transform: scale(0.98); /* Il pulsante si "schiaccia" al click */
 }
+/* FORZA L'HOVER SUL PULSANTE EMAIL */
+#contact a.btn-xl {
+    background-color: #6588A6 !important;
+    border-color: #6588A6 !important;
+    color: #ffffff !important;
+    transition: all 0.3s ease-in-out !important;
+    display: inline-block;
+    padding: 20px 40px;
+}
+
+#contact a.btn-xl:hover {
+    background-color: #ffffff !important; /* Cambia in bianco */
+    color: #6588A6 !important;           /* Testo blu */
+    border-color: #ffffff !important;
+    transform: scale(1.05);               /* Leggero pop-up */
+    box-shadow: 0 0 20px rgba(101, 136, 166, 0.6) !important;
+}
+
+/* TRASFORMA LE SKILLS IN TECH CHIPS */
+#services .col-md-4 {
+    padding: 30px;
+    background: #161616; /* Grigio scurissimo */
+    border: 1px solid #222;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+    width: 31%; /* Per mantenerli affiancati con il padding */
+    margin: 1%;
+}
+
+#services .col-md-4:hover {
+    border-color: #6588A6;
+    transform: translateY(-5px);
+}
+
+#services .fa-stack {
+    color: #6588A6 !important;
+}
+
+/* CORNICE HUD FOTO PROFILO */
+.team-member {
+    position: relative;
+    display: inline-block;
+}
+
+.team-member img {
+    border: 1px solid #333 !important;
+    border-radius: 0 !important; /* Rende la foto quadrata per l'effetto HUD */
+}
+
+.team-member::before, .team-member::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #6588A6;
+    z-index: 10;
+}
+
+/* Angolo alto-sinistra */
+.team-member::before {
+    top: -5px; left: -5px;
+    border-right: none; border-bottom: none;
+}
+
+/* Angolo basso-destra */
+.team-member::after {
+    bottom: 60px; right: -5px; /* Aggiustato per i social sotto */
+    border-left: none; border-top: none;
+}
