@@ -11,6 +11,9 @@ project-date: 2010 - 2012
 client: Various (Chicco, Ferrero, Mulino Bianco, Indie)
 category: Edutainment / Mobile UX / Hardware UI
 description: Designing high-impact educational experiences for top-tier brands and independent mobile titles.
+platforms: Mobile, Web
+role: Game Designer
+engine: Unity
 ---
 
 ### THE OVERVIEW
