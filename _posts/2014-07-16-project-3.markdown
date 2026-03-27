@@ -11,6 +11,9 @@ project-date: 2013-2015
 client: Reply Game Studios
 category: Narrative RPG
 description: A unique blend of interactive fiction and 3D combat where I served as Gamebook Designer for a legendary fantasy IP.
+platforms: Mobile, PC, PS4, Xbox One, Nintendo Switch
+role: Gamebook Designer
+engine: Unity
 ---
 
 ### THE PROJECT
