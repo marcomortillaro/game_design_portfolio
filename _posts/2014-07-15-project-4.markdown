@@ -11,6 +11,10 @@ project-date: 2024 - 2026 (canceled)
 client: Reply Game Studios
 category: Action / Roguelike / AAA Production
 description: Lead a design team on a high-profile title featuring deep Roguelike systems and procedural gameplay loops.
+platforms: PC, PS5, Xbox Series X/S
+role: Lead Game Designer
+engine: Unreal Engine 5
+team-size: 6 Designers (Managed)
 ---
 
 ### THE PROJECT
