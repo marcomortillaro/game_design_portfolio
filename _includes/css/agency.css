@@ -1479,29 +1479,9 @@ section#services .service-item:hover {
    ========================================================== */
 
 
-
-/* Applichiamo il background scuro e la griglia a TUTTE le sezioni principali */
-
-#services, #portfolio, #about, #team, #contact {
-
-    background-color: #0c0c0c !important;
-
-    background-image: 
-
-        radial-gradient(circle at center, #1a1a1a 0%, #0c0c0c 85%),
-
-        linear-gradient(rgba(101, 136, 166, 0.05) 1px, transparent 1px), 
-
-        linear-gradient(90deg, rgba(101, 136, 166, 0.05) 1px, transparent 1px) !important;
-
-    background-size: auto, 40px 40px !important;
-
-    background-attachment: scroll !important;
-
-    color: #e0e0e0 !important;
-
+section#services, section#team {
+    background: radial-gradient(circle at center, #1a1a1a 0%, #0c0c0c 85%) !important;
 }
-
 
 
 /* Fix per le immagini profilo HUD */
@@ -1601,4 +1581,35 @@ section#contact::before {
 section#contact .container {
     position: relative;
     z-index: 10;
+}
+
+/* ==========================================================================
+   CONTACT BUTTON: UNIFIED FEEDBACK (HOVER)
+   ========================================================================== */
+
+/* Stato base del pulsante nei contatti */
+section#contact .btn-xl {
+    background-color: #6588A6 !important; /* Il tuo Blu */
+    border-color: #6588A6 !important;
+    color: #ffffff !important;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Feedback in Hover: Reazione Visiva */
+section#contact .btn-xl:hover,
+section#contact .btn-xl:focus,
+section#contact .btn-xl:active {
+    background-color: #7ba2c4 !important; /* Una sfumatura più chiara del blu */
+    border-color: #ffffff !important;
+    transform: scale(1.05); /* Effetto "pop" leggero */
+    box-shadow: 0 0 20px rgba(101, 136, 166, 0.6) !important; /* Glow blu intorno */
+    outline: none !important;
+}
+
+/* Effetto al click (Active) */
+section#contact .btn-xl:active {
+    transform: scale(0.98); /* Il pulsante si "schiaccia" al click */
 }
