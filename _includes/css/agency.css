@@ -951,19 +951,106 @@ header .container {
     z-index: 3; /* Più alto di tutti */
 }
 /* Attiviamo la prospettiva sul contenitore */
+/* ==========================================================================
+   FIX PORTFOLIO 3D TILT: SOLID CARD SOLUTION
+   ========================================================================= */
+
+/* 1. Attiviamo la Prospettiva e il preserve-3d corretti sulla griglia */
 #portfolio .row {
-    perspective: 1000px;
+    perspective: 1500px; /* Profondità dello spazio 3D */
+    transform-style: preserve-3d;
 }
 
+/* 2. Il Portfolio-Item è il contenitore del TILT */
 .portfolio-item {
-    transform-style: preserve-3d; /* Fondamentale per il 3D interno */
-    transition: transform 0.1s ease; /* Fluidità nativa */
+    transform-style: preserve-3d;
+    transition: transform 0.1s ease-out; /* Fluidità del tilt */
+    margin-bottom: 30px;
+    z-index: 1; /* Sopra la griglia animata */
+    background-color: transparent !important;
 }
 
-/* Facciamo "uscire" la caption quando la card si inclina */
-.portfolio-item:hover .portfolio-caption {
-    transform: translateZ(30px); /* Il testo si solleva di 30px */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.5); /* Ombra dinamica */
+/* 3. Creiamo una "Solid Card" Unica e Solida */
+/* Dobbiamo racchiudere .portfolio-link (immagine) e .portfolio-caption in un unico blocco solido */
+/* Aggiungi questa regola: .portfolio-link { transform-style: preserve-3d; } */
+.portfolio-link {
+    display: block;
+    position: relative;
+    transform-style: preserve-3d; /* Fondamentale */
+}
+
+/* Facciamo sì che .portfolio-caption sia un'unica estensione della card solida */
+.portfolio-caption {
+    background-color: #1a1a1a !important; /* Grigio scuro (no verde) */
+    padding: 25px;
+    text-align: center;
+    border: 1px solid #2a2a2a;
+    border-top: none;
+    
+    /* SOLUZIONE: Invece di sollevare la caption, la incolliamo alla card */
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    position: relative;
+    
+    /* Unificiamo i bordi con l'immagine sopra */
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+/* 4. Solleviamo i Testi INTERNI (non l'intera caption) */
+.portfolio-item:hover .portfolio-caption h4,
+.portfolio-item:hover .portfolio-caption p {
+    transform: translateZ(30px); /* I testi si sollevano *entro* la solid card */
+    position: relative;
+    display: inline-block;
+}
+
+/* 5. Solleviamo la card Solida intera durante l'hover */
+.portfolio-item:hover {
+    z-index: 10 !important; /* Salta sopra i vicini */
+}
+
+.portfolio-item:hover .portfolio-link {
+    transform: scale(1.05) translateZ(1px); /* La card solida si ingrandisce e si solleva impercettibilmente */
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.7); /* Ombra dinamica e profonda */
+}
+
+/* 6. Il Velo Verde (Hover + Plus) deve stare SOPRA e "piatto" sulla card intera */
+.portfolio-hover {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    
+    /* Il colore brand, molto trasparente */
+    background: rgba(90, 140, 122, 0.45) !important;
+    
+    /* SOLUZIONE: deve stare sopra l'immagine intera e la caption, non un livello intermedio */
+    z-index: 20 !important; 
+    
+    transform: translateZ(0.1px); /* Solleviamo impercettibilmente per evitare flickering con l'immagine */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    backface-visibility: hidden;
+}
+
+/* Solleviamo il simbolo "+" *entro* il velo */
+.portfolio-hover-content {
+    color: #fff !important;
+    font-size: 3em !important;
+    text-align: center;
+    transform: translateZ(1px); /* Il "+" si solleva *dentro* il velo */
+}
+
+.portfolio-item:hover .portfolio-hover {
+    opacity: 1; /* Mostra il velo verde */
+}
+
+/* 7. La Thumbnail Statica deve stare alla base della card solid */
+.static-img {
+    backface-visibility: hidden;
+    transform: translateZ(0); /* Base della solid card */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
 }
 
 /* ==========================================================================
