@@ -49,3 +49,20 @@ document.addEventListener("DOMContentLoaded", function() {
         };
     }
 });
+
+// Script per attivare l'animazione della Timeline allo scroll
+document.addEventListener("DOMContentLoaded", function() {
+    const timelineItems = document.querySelectorAll('.timeline > li');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+            }
+        });
+    }, { threshold: 0.2 }); // Si attiva quando il 20% dell'elemento è visibile
+
+    timelineItems.forEach(item => {
+        observer.observe(item);
+    });
+});
