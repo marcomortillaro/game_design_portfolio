@@ -1,37 +1,38 @@
-<!-- Team Section -->
-    <section id="team" class="bg-light-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">About Me</h2>
-                    <h3 class="section-subheading text-muted">Crafting Combat, Mastering Systems, Leading Visions</h3>
-                </div>
-            </div>
-            <div class="row">
-                {% for member in site.people %}
-                <div class="col-sm-12">
-                    <div class="team-member">
-                        <img src="img/team/{{ member.pic }}.jpg" class="img-responsive img-circle" alt="">
-                        <h4>{{ member.name }}</h4>
-                        <p class="text-muted">{{ member.position }}</p>
-                        <ul class="list-inline social-buttons">
-                            {% for network in member.social %}
-                            <li>
-                                <a href="{{ network.url }}" target="_blank" rel="noopener noreferrer">
-                                    <i class="fa fa-{{ network.title }}"></i>
-                                </a>
-                            </li>
-                            {% endfor %}
-
-                        </ul>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <p class="large text-muted">Lead Game Designer with 15+ years of experience in the industry. Specializing in Combat Systems and 3Cs (Character, Controls, Camera), I have a proven track record of leading design teams and transforming creative visions into polished, high-stake gameplay mechanics. From AA action titles like Soulstice to immersive VR experiences, my focus is on delivering satisfying player agency and tight game loops.</p>
-                </div>
+<section id="team" class="about-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">About Me</h2>
+                <h3 class="section-subheading">Crafting Combat, Mastering Systems, Leading Visions</h3>
             </div>
         </div>
-    </section>
+
+        <div class="row">
+            {% for member in site.people %}
+            <div class="col-md-4 text-center">
+                <div class="profile-img-container">
+                    <img src="img/team/{{ member.pic }}.jpg" class="img-responsive" alt="{{ member.name }}">
+                </div>
+                
+                <ul class="list-inline social-buttons">
+                    {% for network in member.social %}
+                    <li>
+                        <a href="{{ network.url }}" target="_blank" rel="noopener noreferrer">
+                            <i class="fa fa-{{ network.title }}"></i>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="col-md-8">
+                <span class="about-text-highlight">{{ member.position }}</span>
+                <div class="about-bio-text">
+                    <p>Lead Game Designer with 15+ years of experience in the industry. Specializing in <strong>Combat Systems</strong> and <strong>3Cs</strong> (Character, Controls, Camera), I have a proven track record of leading design teams and transforming creative visions into polished, high-stake gameplay mechanics.</p>
+                    <p>From AA action titles like <strong>Soulstice</strong> to immersive VR experiences, my focus is on delivering satisfying player agency and tight game loops.</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
