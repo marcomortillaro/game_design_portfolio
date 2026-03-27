@@ -1297,21 +1297,17 @@ header .container {
 }
 
 /* ==========================================================================
-   SKILLS & ABOUT ME: TECH UPGRADE (HUD & CHIPS)
+   FINAL UPGRADE: SKILLS (TECH CHIPS) & ABOUT (HUD PROFILE)
    ========================================================================== */
 
-/* --- 1. SEZIONE SKILLS (SERVICES) --- */
-#services {
+/* Forza lo sfondo scuro su entrambe le sezioni */
+#services, #team, .about-section {
     background-color: #0c0c0c !important;
     padding: 100px 0;
-    position: relative;
+    color: #e0e0e0;
 }
 
-/* Trasformiamo ogni skill in una "Tech Chip" */
-#services .col-md-4 {
-    margin-bottom: 30px;
-}
-
+/* --- SKILLS STYLE --- */
 .service-item {
     background: #161616;
     padding: 45px 25px;
@@ -1319,64 +1315,30 @@ header .container {
     border-radius: 4px;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     height: 100%;
-    text-align: center;
 }
 
-/* Effetto "Power Up" all'hover */
 .service-item:hover {
     border-color: #6588A6;
     transform: translateY(-8px);
     box-shadow: 0 15px 40px rgba(101, 136, 166, 0.15);
-    background: #1a1a1a;
 }
 
 #services .fa-stack {
     color: #6588A6;
-    margin-bottom: 10px;
-    transition: transform 0.3s ease;
 }
 
-.service-item:hover .fa-stack {
-    transform: scale(1.1);
-}
-
-#services h4.service-heading {
-    color: #f1f1f1 !important;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 1.2em;
-    margin-top: 20px;
-}
-
-#services p.text-muted {
-    color: #a0a0a0 !important;
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-/* --- 2. SEZIONE ABOUT ME (BIO) --- */
-.about-section {
-    background-color: #0c0c0c;
-    color: #e0e0e0;
-    padding: 100px 0;
-}
-
-/* Contenitore Immagine con Mirini HUD */
+/* --- ABOUT/TEAM STYLE (HUD) --- */
 .profile-img-container {
     position: relative;
     display: inline-block;
     padding: 15px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .profile-img-container img {
     border: 1px solid #333;
-    filter: grayscale(20%); /* Un tocco più serio */
-    transition: filter 0.3s ease;
-}
-
-.profile-img-container:hover img {
-    filter: grayscale(0%);
+    border-radius: 0 !important; /* Rimuove il cerchio per l'effetto mirino */
+    max-width: 250px;
 }
 
 /* Angoli HUD Blu */
@@ -1384,8 +1346,8 @@ header .container {
 .profile-img-container::after {
     content: "";
     position: absolute;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border: 2px solid #6588A6;
     z-index: 5;
 }
@@ -1400,9 +1362,7 @@ header .container {
     border-left: none; border-top: none;
 }
 
-/* Testo Biografico */
 .about-text-highlight {
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1.4em;
     color: #6588A6;
     font-weight: 700;
@@ -1411,23 +1371,24 @@ header .container {
     margin-bottom: 15px;
     border-left: 4px solid #6588A6;
     padding-left: 20px;
+    text-align: left;
 }
 
 .about-bio-text {
     font-size: 1.1em;
     line-height: 1.8;
     color: #b0b0b0;
-    text-align: justify;
-}
-/* Unifica lo stile About e Team */
-#team, .about-section {
-    background-color: #0c0c0c !important;
-    padding: 100px 0;
+    text-align: left;
 }
 
-/* Rendi la foto quadrata invece che tonda per i mirini HUD */
-.profile-img-container img {
-    border-radius: 0; /* Rimuove il cerchio per l'effetto HUD */
-    max-width: 280px;
-    margin: 0 auto;
+/* Social buttons coerenza */
+#team .social-buttons li a {
+    background-color: #1a1a1a;
+    color: #6588A6;
+    border: 1px solid #333;
+}
+
+#team .social-buttons li a:hover {
+    background-color: #6588A6;
+    color: #fff;
 }
