@@ -10,6 +10,10 @@ alt: Soulstice Gameplay
 project-date: 2022
 client: Reply Game Studios
 category: Action / Hack 'n' Slash
+platforms: PC, PS5, Xbox Series X/S
+role: Lead Game Designer
+engine: Unreal Engine 4
+team-size: 6 Designers (Managed)
 ---
 
 ### The Project
