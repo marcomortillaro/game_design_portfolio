@@ -43,16 +43,23 @@
 
     <!-- Header -->
     <header>
-        <div class="container">
-            <div class="intro-text">
-                <div class="intro-lead-in">Lead Game Designer</div>
-                <div class="intro-heading">MARCO MORTILLARO</div>
-                <a href="{{ site.baseurl }}/Marco_Mortillaro_CV.pdf" class="btn btn-xl" target="_blank">
-                    <i class="fa fa-download"></i> Download CV (PDF)
-                </a>
-            </div>
+    <div class="container">
+        <div class="header-image-overlay"></div>
+
+        <video autoplay muted loop playsinline id="hero-video" class="hidden-video">
+            <source src="{{ site.baseurl }}/img/hero-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="intro-text">
+            <div class="intro-lead-in">Lead Game Designer</div>
+            <div class="intro-heading">MARCO MORTILLARO</div>
+            <a href="{{ site.baseurl }}/Marco_Mortillaro_CV.pdf" class="btn btn-xl" target="_blank">
+                <i class="fa fa-download"></i> Download CV (PDF)
+            </a>
         </div>
-    </header>
+    </div>
+</header>
 <!--
         {% for page in site.pages %}
           {% if page.title %}<a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>{% endif %}
