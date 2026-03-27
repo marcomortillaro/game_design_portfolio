@@ -950,124 +950,21 @@ header .container {
     position: relative;
     z-index: 3; /* Più alto di tutti */
 }
-/* Attiviamo la prospettiva sul contenitore */
 /* ==========================================================================
-   FIX PORTFOLIO 3D TILT: SOLID CARD SOLUTION
+   PORTFOLIO DEFINITIVO: SOLID 3D TILT & ANIMATED GRID
    ========================================================================= */
 
-/* 1. Attiviamo la Prospettiva e il preserve-3d corretti sulla griglia */
-#portfolio .row {
-    perspective: 1500px; /* Profondità dello spazio 3D */
-    transform-style: preserve-3d;
-}
-
-/* 2. Il Portfolio-Item è il contenitore del TILT */
-.portfolio-item {
-    transform-style: preserve-3d;
-    transition: transform 0.1s ease-out; /* Fluidità del tilt */
-    margin-bottom: 30px;
-    z-index: 1; /* Sopra la griglia animata */
-    background-color: transparent !important;
-}
-
-/* 3. Creiamo una "Solid Card" Unica e Solida */
-/* Dobbiamo racchiudere .portfolio-link (immagine) e .portfolio-caption in un unico blocco solido */
-/* Aggiungi questa regola: .portfolio-link { transform-style: preserve-3d; } */
-.portfolio-link {
-    display: block;
-    position: relative;
-    transform-style: preserve-3d; /* Fondamentale */
-}
-
-/* Facciamo sì che .portfolio-caption sia un'unica estensione della card solida */
-.portfolio-caption {
-    background-color: #1a1a1a !important; /* Grigio scuro (no verde) */
-    padding: 25px;
-    text-align: center;
-    border: 1px solid #2a2a2a;
-    border-top: none;
-    
-    /* SOLUZIONE: Invece di sollevare la caption, la incolliamo alla card */
-    transform-style: preserve-3d;
-    backface-visibility: hidden;
-    position: relative;
-    
-    /* Unificiamo i bordi con l'immagine sopra */
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-}
-
-/* 4. Solleviamo i Testi INTERNI (non l'intera caption) */
-.portfolio-item:hover .portfolio-caption h4,
-.portfolio-item:hover .portfolio-caption p {
-    transform: translateZ(30px); /* I testi si sollevano *entro* la solid card */
-    position: relative;
-    display: inline-block;
-}
-
-/* 5. Solleviamo la card Solida intera durante l'hover */
-.portfolio-item:hover {
-    z-index: 10 !important; /* Salta sopra i vicini */
-}
-
-.portfolio-item:hover .portfolio-link {
-    transform: scale(1.05) translateZ(1px); /* La card solida si ingrandisce e si solleva impercettibilmente */
-    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.7); /* Ombra dinamica e profonda */
-}
-
-/* 6. Il Velo Verde (Hover + Plus) deve stare SOPRA e "piatto" sulla card intera */
-.portfolio-hover {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    
-    /* Il colore brand, molto trasparente */
-    background: rgba(90, 140, 122, 0.45) !important;
-    
-    /* SOLUZIONE: deve stare sopra l'immagine intera e la caption, non un livello intermedio */
-    z-index: 20 !important; 
-    
-    transform: translateZ(0.1px); /* Solleviamo impercettibilmente per evitare flickering con l'immagine */
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    backface-visibility: hidden;
-}
-
-/* Solleviamo il simbolo "+" *entro* il velo */
-.portfolio-hover-content {
-    color: #fff !important;
-    font-size: 3em !important;
-    text-align: center;
-    transform: translateZ(1px); /* Il "+" si solleva *dentro* il velo */
-}
-
-.portfolio-item:hover .portfolio-hover {
-    opacity: 1; /* Mostra il velo verde */
-}
-
-/* 7. La Thumbnail Statica deve stare alla base della card solid */
-.static-img {
-    backface-visibility: hidden;
-    transform: translateZ(0); /* Base della solid card */
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-}
-
-/* ==========================================================================
-   PORTFOLIO ESTETICA FINALE: BACKGROUND, TESTI E CAPTION
-   ========================================================================= */
-
+/* 1. SEZIONE PORTFOLIO: BACKGROUND E TITOLI */
 #portfolio {
-    background-color: #0c0c0c !important; /* Fondo ancora più profondo */
+    background-color: #0c0c0c !important;
     position: relative;
     overflow: hidden;
     padding: 100px 0;
     z-index: 1;
 }
 
-/* 1. Titoli della sezione (Portfolio e Sottotitolo) */
 #portfolio .section-heading {
-    color: #f1f1f1 !important; /* Bianco sporco molto chiaro, leggibile */
+    color: #f1f1f1 !important;
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 10px;
@@ -1075,72 +972,29 @@ header .container {
 }
 
 #portfolio .section-subheading {
-    color: #a0a0a0 !important; /* Grigio medio, non sparisce ma non distrae */
+    color: #a0a0a0 !important;
     font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: italic;
     font-size: 16px;
     margin-bottom: 75px;
 }
 
-/* 2. Il "Tessuto" della griglia animata (Riconfermato) */
+/* 2. GRIGLIA ANIMATA (Sotto tutto) */
 #portfolio::before {
     content: "";
     position: absolute;
     top: -100px; left: -100px; right: -100px; bottom: -100px;
-    
     background-image: 
         linear-gradient(rgba(90, 140, 122, 0.15) 1px, transparent 1px), 
         linear-gradient(90deg, rgba(90, 140, 122, 0.15) 1px, transparent 1px),
         linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px) !important;
     background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px !important;
-    
-    animation: gridMove 25s linear infinite !important; /* 25s è un buon compromesso */
+    animation: gridMove 25s linear infinite !important;
     z-index: -1;
     pointer-events: none;
 }
 
-/* 3. I BOX DEI PROGETTI (Caption) */
-.portfolio-caption {
-    background-color: #1a1a1a !important; /* Grigio molto scuro, non nero puro */
-    padding: 25px;
-    text-align: center;
-    border: 1px solid #2a2a2a; /* Bordo sottile per definirne i contorni */
-    border-top: none;
-    transition: all 0.3s ease;
-}
-
-/* Testi dentro i box dei progetti */
-.portfolio-caption h4 {
-    color: #e0e0e0 !important; /* Titolo progetto quasi bianco */
-    margin-top: 0;
-    text-transform: none;
-    font-weight: 700;
-}
-
-.portfolio-caption p {
-    color: #a0a0a0 !important; /* Sottotitolo progetto (Ruolo) in grigio chiaro */
-    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-style: italic;
-    font-size: 14px;
-    margin: 0;
-}
-
-/* Un tocco di juice all'hover sulla card (Riconfermato) */
-.portfolio-link img {
-    transition: transform 0.4s ease;
-}
-
-.portfolio-item:hover .portfolio-link img {
-    transform: scale(1.03); /* Leggero zoom-in */
-}
-
-/* Mostriamo il velo verde (+) sempre sopra il tilt/zoom */
-.portfolio-hover {
-    z-index: 10 !important;
-}
-
-/* 4. Effetto Vignetta e Z-Index del Container (Riconfermati) */
 #portfolio::after {
     content: "";
     position: absolute;
@@ -1150,13 +1004,93 @@ header .container {
     pointer-events: none;
 }
 
-#portfolio .container {
-    position: relative;
-    z-index: 10;
-}
-
-/* Definizione del movimento della griglia */
 @keyframes gridMove {
     from { transform: translate(0, 0); }
     to { transform: translate(100px, 100px); }
+}
+
+/* 3. SOLID CARD 3D LOGIC (Il fix per il tilt) */
+#portfolio .row {
+    perspective: 2000px;
+}
+
+.portfolio-item {
+    transform-style: preserve-3d !important;
+    transition: transform 0.1s ease-out;
+    margin-bottom: 30px;
+    z-index: 10;
+    background: transparent !important;
+}
+
+/* Rimuoviamo il vecchio z-index forzato del template che rompe il tilt */
+#portfolio * {
+    z-index: auto;
+}
+
+.portfolio-link {
+    display: block;
+    position: relative;
+    transform-style: preserve-3d !important;
+    background: #1a1a1a; /* Evita buchi visivi */
+}
+
+/* Thumbnail Statica */
+.static-img {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    display: block;
+}
+
+/* Velo Verde (Hover) */
+.portfolio-hover {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(90, 140, 122, 0.6) !important;
+    z-index: 5 !important;
+    transform: translateZ(1px); /* Appena sopra l'immagine */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-hover {
+    opacity: 1;
+}
+
+.portfolio-hover-content {
+    position: absolute;
+    top: 50%; width: 100%;
+    transform: translateY(-50%) translateZ(10px); /* Il "+" si solleva fisicamente */
+    text-align: center;
+    color: white;
+}
+
+/* Caption Scura Saldata alla Card */
+.portfolio-caption {
+    background-color: #1a1a1a !important;
+    padding: 25px;
+    text-align: center;
+    border: 1px solid #2a2a2a;
+    border-top: none;
+    transform-style: preserve-3d !important;
+    transform: translateZ(0); /* Incollata alla base dell'immagine */
+}
+
+/* Effetto profondità sui testi all'interno */
+.portfolio-caption h4 {
+    color: #e0e0e0 !important;
+    margin: 0;
+    transform: translateZ(20px); /* Il titolo esce leggermente */
+}
+
+.portfolio-caption p {
+    color: #a0a0a0 !important;
+    font-style: italic;
+    margin: 5px 0 0;
+    transform: translateZ(10px); /* Il ruolo esce un po' meno */
+}
+
+/* 4. CONTROLLO CONTAINER */
+#portfolio .container {
+    position: relative;
+    z-index: 20;
 }
