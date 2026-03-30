@@ -14,6 +14,7 @@ platforms: PC, PS5, Xbox Series X/S
 role: Lead Game Designer
 engine: Unreal Engine 4
 team-size: 6 Designers (Managed)
+steam-link: "https://store.steampowered.com/app/1602080/Soulstice/"
 ---
 
 ### The Project
