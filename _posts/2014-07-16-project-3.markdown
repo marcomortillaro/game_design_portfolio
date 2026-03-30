@@ -14,6 +14,7 @@ description: A unique blend of interactive fiction and 3D combat where I served 
 platforms: Mobile, PC, PS4, Xbox One, Nintendo Switch
 role: Gamebook Designer
 engine: Unity
+steam-link: "https://store.steampowered.com/app/279440/Joe_Devers_Lone_Wolf_HD_Remastered/"
 ---
 
 ### THE PROJECT
