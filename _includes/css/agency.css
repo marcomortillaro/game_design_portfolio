@@ -1763,3 +1763,18 @@ section#contact .btn-xl:active {
         margin-bottom: 15px !important;
     }
 }
+
+.project-details-bar .detail-item a {
+    display: block; /* Mantiene il link sotto lo span "Store" */
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.project-details-bar .detail-item a:hover {
+    color: #fff !important;
+}
+
+/* Se vuoi l'icona di Steam */
+.project-details-bar .detail-item i {
+    margin-right: 5px;
+}
