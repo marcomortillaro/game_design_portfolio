@@ -15,6 +15,7 @@ platforms: VR (PC, PS4)
 role: Lead Game Designer
 engine: Unreal Engine 4
 team-size: 2 Designers (Managed)
+steam-link: "https://store.steampowered.com/app/677330/Theseus/"
 ---
 
 ### THE PROJECT
