@@ -13,11 +13,20 @@
                             <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}">
 
                             <div class="project-details-bar">
-                                {% if post.platforms %}<div class="detail-item"><span>Platform</span>{{ post.platforms }}</div>{% endif %}
-                                {% if post.role %}<div class="detail-item"><span>Role</span>{{ post.role }}</div>{% endif %}
-                                {% if post.engine %}<div class="detail-item"><span>Engine</span>{{ post.engine }}</div>{% endif %}
-                                {% if post.team-size %}<div class="detail-item"><span>Team</span>{{ post.team-size }}</div>{% endif %}
-                            </div>
+                            {% if post.platforms %}<div class="detail-item"><span>Platform</span>{{ post.platforms }}</div>{% endif %}
+                            {% if post.role %}<div class="detail-item"><span>Role</span>{{ post.role }}</div>{% endif %}
+                            {% if post.engine %}<div class="detail-item"><span>Engine</span>{{ post.engine }}</div>{% endif %}
+                            {% if post.team-size %}<div class="detail-item"><span>Team</span>{{ post.team-size }}</div>{% endif %}
+    
+                            {% if post.steam-link %}
+        <div class="detail-item">
+        <span>Store</span>
+        <a href="{{ post.steam-link }}" target="_blank" style="color: #6588A6; text-decoration: none;">
+            <i class="fa fa-steam"></i> Steam Page
+        </a>
+    </div>
+    {% endif %}
+</div>
 
                             <div class="project-content-text">
                                 {{ post.content }}
